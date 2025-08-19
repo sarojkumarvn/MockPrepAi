@@ -8,33 +8,33 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 222.2 84% 4.9%;
 
     /* Primary gradient: Deep purple to blue */
     --primary: 262 52% 47%;
     --primary-foreground: 210 40% 98%;
     --primary-gradient: linear-gradient(135deg, hsl(262 52% 47%), hsl(231 48% 48%));
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 262 52% 47%;
 
     --radius: 0.75rem;
@@ -44,60 +44,60 @@
     --success-foreground: 210 40% 98%;
 
     /* Interview specific colors */
-    --interview-bg: 240 10% 3.9%;
-    --interview-card: 240 10% 8%;
-    --interview-border: 240 3.7% 15.9%;
+    --interview-bg: 222.2 84% 4.9%;
+    --interview-card: 222.2 47% 11%;
+    --interview-border: 217.2 32.6% 17.5%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 5.9% 90%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 222.2 47% 11%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 84% 4.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
     --sidebar-ring: 262 52% 47%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 84% 4.9%;
     --primary-gradient: linear-gradient(135deg, hsl(262 52% 57%), hsl(231 48% 58%));
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
     --ring: 262 52% 47%;
 
     --success: 262 52% 57%;
-    --success-foreground: 0 0% 98%;
+    --success-foreground: 210 40% 98%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 262 52% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
     --sidebar-ring: 262 52% 47%;
   }
 }
@@ -113,6 +113,31 @@
     font-feature-settings: 'cv11', 'ss01';
     font-variation-settings: 'opsz' 32;
   }
+
+  /* Ensure proper text visibility */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+  }
+
+  p {
+    @apply text-foreground;
+  }
+
+  /* Fix contrast for muted text */
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  /* Ensure gradient text is visible */
+  .bg-gradient-to-r {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  /* Fix transparent text issues */
+  .text-transparent {
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @layer components {
@@ -126,21 +151,21 @@
   }
 
   .btn-outline-gradient {
-    @apply border-2 border-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-border text-transparent bg-clip-text font-medium rounded-xl px-6 py-2.5 transition-all duration-300 hover:bg-clip-padding hover:text-white hover:shadow-xl;
+    @apply border-2 border-purple-500 text-purple-600 dark:text-purple-400 font-medium rounded-xl px-6 py-2.5 transition-all duration-300 hover:bg-purple-600 hover:text-white hover:shadow-xl;
   }
 
   /* Success state styles */
   .success-check {
-    @apply inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-600 mr-3;
+    @apply inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 mr-3;
   }
 
   /* Interview preview card */
   .preview-item {
-    @apply flex items-center space-x-3 p-3 rounded-xl bg-purple-50/50 dark:bg-purple-900/20;
+    @apply flex items-center space-x-3 p-3 rounded-xl bg-purple-50/50 dark:bg-purple-900/20 border border-purple-200/50 dark:border-purple-800/50;
   }
 
   .preview-icon {
-    @apply w-8 h-8 rounded-xl flex items-center justify-center text-sm font-medium;
+    @apply w-8 h-8 rounded-xl flex items-center justify-center text-sm font-medium bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400;
   }
 
   /* Marquee animation */
@@ -160,6 +185,15 @@
 
   .dropdown-enter-active {
     @apply opacity-100 scale-100;
+  }
+
+  /* Fix card backgrounds for better contrast */
+  .card-gradient-light {
+    @apply bg-gradient-to-br from-white to-purple-50/50 border border-purple-200/30;
+  }
+
+  .card-gradient-dark {
+    @apply dark:bg-gradient-to-br dark:from-gray-900 dark:to-purple-950/20 dark:border dark:border-purple-800/30;
   }
 }
 
@@ -208,15 +242,51 @@
       transform: translate3d(0,-2px,0);
     }
   }
+
+  /* Text visibility utilities */
+  .text-visible {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .text-gradient-visible {
+    background: linear-gradient(135deg, hsl(262 52% 47%), hsl(231 48% 48%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Ensure proper contrast for gradient text */
+  .dark .text-gradient-visible {
+    background: linear-gradient(135deg, hsl(262 52% 65%), hsl(231 48% 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* Glass morphism effects */
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-white/20 dark:border-gray-800/20;
   }
 
   .glass-dark {
-    @apply bg-gray-900/10 backdrop-blur-md border border-gray-800/20;
+    @apply bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-800/20 dark:border-gray-700/20;
   }
+}
+
+/* Fix for hidden text in gradients */
+.bg-clip-text {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+/* Ensure dropdowns have proper background and contrast */
+.dropdown-content {
+  @apply bg-popover border border-border shadow-lg z-50;
+}
+
+.dropdown-item {
+  @apply text-popover-foreground hover:bg-accent hover:text-accent-foreground;
 }

@@ -158,7 +158,7 @@ const Index = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="flex justify-center mb-6">
-                <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 px-4 py-2 rounded-full">
+                <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 px-4 py-2 rounded-full border border-purple-200/50 dark:border-purple-800/50">
                   <Star className="w-4 h-4 text-yellow-500" />
                   <span className="text-sm font-medium text-purple-700 dark:text-purple-300">AI-Powered Career Growth</span>
                 </div>
@@ -166,7 +166,7 @@ const Index = () => {
               
               <h1 className="text-4xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
                 Master Your{' '}
-                <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                <span className="text-gradient-visible">
                   Tech Career
                 </span>{' '}
                 with AI
@@ -180,7 +180,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                 <Button 
                   size="lg" 
-                  className="text-lg px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+                  className="text-lg px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-white font-semibold"
                   onClick={() => navigate('/signup')}
                 >
                   Start Your Journey
@@ -189,7 +189,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="text-lg px-10 py-4 border-2 border-purple-200 hover:bg-purple-50 dark:border-purple-800 dark:hover:bg-purple-900/20"
+                  className="text-lg px-10 py-4 border-2 border-purple-300 dark:border-purple-600 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold"
                   onClick={() => navigate('/signin')}
                 >
                   Watch Demo
@@ -225,7 +225,7 @@ const Index = () => {
       </section>
 
       {/* Current Features Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-purple-50/30 dark:from-gray-950 dark:to-purple-950/10">
+      <section className="py-24 bg-gradient-to-b from-background to-purple-50/30 dark:from-background dark:to-purple-950/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -250,15 +250,15 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
-                <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20">
+                <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20 border border-purple-200/30 dark:border-purple-800/30">
                   <CardHeader className="text-center pb-4">
                     <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 flex items-center justify-center ${feature.color}`}>
                       <feature.icon className="w-7 h-7" />
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-center text-base leading-relaxed">
+                    <CardDescription className="text-center text-base leading-relaxed text-muted-foreground">
                       {feature.description}
                     </CardDescription>
                   </CardContent>
@@ -295,7 +295,7 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <Card className="shadow-lg hover:shadow-xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white/60 to-gray-50/60 dark:from-gray-900/60 dark:to-gray-800/60 opacity-70 hover:opacity-90 relative overflow-hidden">
+                <Card className="shadow-lg hover:shadow-xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white/60 to-gray-50/60 dark:from-gray-900/60 dark:to-gray-800/60 opacity-70 hover:opacity-90 relative overflow-hidden border border-gray-200 dark:border-gray-700">
                   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">
                       Soon

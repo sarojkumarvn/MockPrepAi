@@ -35,13 +35,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg mr-3"></div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg mr-3"></div>
+            <span className="text-xl font-bold text-gradient-visible">
               InterviewAI
             </span>
           </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 onMouseEnter={() => setActiveDropdown(item.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200">
+                <button className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium">
                   <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -93,7 +93,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={toggleTheme}
-              className="w-9 h-9 p-0"
+              className="w-9 h-9 p-0 text-foreground hover:bg-accent"
             >
               {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
@@ -101,14 +101,14 @@ const Navbar = () => {
             <Button 
               variant="ghost" 
               onClick={() => navigate('/signin')}
-              className="font-medium"
+              className="font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             >
               Sign In
             </Button>
             
             <Button 
               onClick={() => navigate('/signup')}
-              className="btn-gradient"
+              className="btn-gradient font-medium"
             >
               Sign Up
             </Button>
