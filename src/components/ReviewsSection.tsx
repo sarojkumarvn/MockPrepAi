@@ -59,8 +59,8 @@ const ReviewsSection = () => {
           </p>
         </motion.div>
 
-        {/* Marquee Container */}
-        <div className="relative">
+        {/* First Marquee Container */}
+        <div className="relative mb-8">
           <div className="flex space-x-6 animate-marquee">
             {/* First set of reviews */}
             {reviews.map((review, index) => (
@@ -101,6 +101,77 @@ const ReviewsSection = () => {
             {/* Duplicate set for seamless loop */}
             {reviews.map((review, index) => (
               <div key={`duplicate-${index}`} className="min-w-[350px] max-w-[350px]">
+                <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="text-2xl mr-3">{review.avatar}</div>
+                      <div>
+                        <div className="font-semibold text-foreground">{review.name}</div>
+                        <div className="text-sm text-muted-foreground">{review.role}</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    
+                    <div className="relative">
+                      <Quote className="absolute -top-1 -left-1 w-4 h-4 text-primary/20" />
+                      <p className="text-sm text-foreground leading-relaxed pl-4">
+                        {review.text}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+                </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Second Marquee Container - Opposite Direction */}
+        <div className="relative">
+          <div className="flex space-x-6 animate-marquee-reverse">
+            {/* First set of reviews */}
+            {reviews.slice().reverse().map((review, index) => (
+              <motion.div
+                key={`reverse-${index}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="min-w-[350px] max-w-[350px]"
+              >
+                <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="text-2xl mr-3">{review.avatar}</div>
+                      <div>
+                        <div className="font-semibold text-foreground">{review.name}</div>
+                        <div className="text-sm text-muted-foreground">{review.role}</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    
+                    <div className="relative">
+                      <Quote className="absolute -top-1 -left-1 w-4 h-4 text-primary/20" />
+                      <p className="text-sm text-foreground leading-relaxed pl-4">
+                        {review.text}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+            
+            {/* Duplicate set for seamless loop */}
+            {reviews.slice().reverse().map((review, index) => (
+              <div key={`reverse-duplicate-${index}`} className="min-w-[350px] max-w-[350px]">
                 <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
