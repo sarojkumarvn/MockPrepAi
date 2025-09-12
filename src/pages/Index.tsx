@@ -151,53 +151,119 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50/50 via-blue-50/30 to-cyan-50/50 dark:from-purple-950/20 dark:via-blue-950/10 dark:to-cyan-950/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex justify-center mb-6">
-                <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 px-4 py-2 rounded-full border border-purple-200/50 dark:border-purple-800/50">
-                  <Star className="w-4 h-4 text-yellow-500" />
-                  <span className="text-sm font-medium text-purple-700 dark:text-purple-300">AI-Powered Career Growth</span>
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
+            {/* Left Content - 60% */}
+            <div className="lg:col-span-3">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="flex mb-6">
+                  <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 px-4 py-2 rounded-full border border-purple-200/50 dark:border-purple-800/50">
+                    <Star className="w-4 h-4 text-yellow-500" />
+                    <span className="text-sm font-medium text-purple-700 dark:text-purple-300">AI-Powered Career Growth</span>
+                  </div>
                 </div>
-              </div>
-              
-              <h1 className="text-4xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
-                Master Your{' '}
-                <span className="text-gradient-visible">
-                  Tech Career
-                </span>{' '}
-                with AI
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-                From interview preparation to resume building, roadmaps to skill assessments - 
-                your complete AI-powered career companion for landing your dream tech job.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-                <Button 
-                  size="lg" 
-                  className="text-lg px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-white font-semibold"
-                  onClick={() => navigate('/signup')}
-                >
-                  Start Your Journey
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="text-lg px-10 py-4 border-2 border-purple-300 dark:border-purple-600 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold"
-                  onClick={() => navigate('/signin')}
-                >
-                  Watch Demo
-                </Button>
-              </div>
-            </motion.div>
+                
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
+                  Master Your{' '}
+                  <span className="text-gradient-visible">
+                    Tech Career
+                  </span>{' '}
+                  with AI
+                </h1>
+                
+                <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
+                  From interview preparation to resume building, roadmaps to skill assessments - 
+                  your complete AI-powered career companion for landing your dream tech job.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 mb-16">
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl text-white font-semibold"
+                    onClick={() => navigate('/signup')}
+                  >
+                    Start Your Journey
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="text-lg px-10 py-4 border-2 border-purple-300 dark:border-purple-600 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold"
+                    onClick={() => navigate('/signin')}
+                  >
+                    Watch Demo
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
 
-            {/* Animated Stats */}
+            {/* Right Visual - 40% */}
+            <div className="lg:col-span-2">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative"
+              >
+                {/* Main Visual Container */}
+                <div className="relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl p-8 backdrop-blur-sm border border-purple-200/30 dark:border-purple-700/30">
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full animate-bounce opacity-80"></div>
+                  <div className="absolute -top-2 -right-6 w-6 h-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full animate-pulse opacity-60"></div>
+                  <div className="absolute -bottom-6 -right-2 w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full animate-bounce opacity-70" style={{ animationDelay: '0.5s' }}></div>
+                  
+                  {/* Central Icon Grid */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl text-white shadow-lg">
+                      <Brain className="w-6 h-6" />
+                    </div>
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl text-white shadow-lg">
+                      <Video className="w-6 h-6" />
+                    </div>
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-xl text-white shadow-lg">
+                      <BarChart3 className="w-6 h-6" />
+                    </div>
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-green-500 rounded-xl text-white shadow-lg">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl text-white shadow-lg">
+                      <Sparkles className="w-6 h-6" />
+                    </div>
+                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-500 to-purple-500 rounded-xl text-white shadow-lg">
+                      <Zap className="w-6 h-6" />
+                    </div>
+                  </div>
+                  
+                  {/* Progress Indicator */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm text-muted-foreground">
+                      <span>Career Progress</span>
+                      <span>94%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <motion.div 
+                        className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: '94%' }}
+                        transition={{ duration: 2, delay: 0.5 }}
+                      ></motion.div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Background Decorative Elements */}
+                <div className="absolute inset-0 -z-10">
+                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-xl"></div>
+                  <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-xl"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+            {/* Animated Stats - Moved to center below hero */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,7 +286,6 @@ const Index = () => {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
         </div>
       </section>
 
