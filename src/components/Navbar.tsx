@@ -4,6 +4,7 @@ import { Moon, Sun, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import menuItems from '@/constants/constant';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,6 +12,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
+  // Handling auto-scrolling effect
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
@@ -21,29 +23,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+ // Toggle to dark mode
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle('dark');
   };
 
-  const menuItems = [
-    {
-      name: 'Features',
-      items: ['AI Interview', 'Code Editor', 'Real-time Analysis', 'Performance Tracking']
-    },
-    {
-      name: 'Pricing',
-      items: ['Free Plan', 'Pro Plan', 'Enterprise', 'Student Discount']
-    },
-    {
-      name: 'Resources',
-      items: ['Documentation', 'Interview Tips', 'Practice Questions', 'Blog']
-    },
-    {
-      name: 'About',
-      items: ['Our Story', 'Team', 'Careers', 'Contact']
-    }
-  ];
+
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -104,6 +90,7 @@ const Navbar = () => {
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
+            {/* The theme Button  */}
             <Button
               variant="ghost"
               size="sm"
@@ -121,12 +108,13 @@ const Navbar = () => {
               Sign In
             </Button>
             
-            <Button 
-              onClick={() => navigate('/signup')}
-              className="btn-gradient font-medium"
-            >
-              Sign Up
-            </Button>
+           <Button 
+  onClick={() => navigate('/signup')}
+  className={`btn-gradient ${darkMode ? "text-black/25" : "text-white"} font-medium hover:bg-black hover:text-black`}
+>
+  Sign Up
+</Button>
+
           </div>
         </div>
       </div>

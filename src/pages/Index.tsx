@@ -44,19 +44,20 @@ const Index = () => {
       available: true
     },
     {
-      icon: BarChart3,
+      icon: BookOpen,
       title: 'Detailed Reports',
       description: 'Comprehensive performance analytics with actionable insights for improvement.',
       color: 'text-purple-600',
       available: true
     },
-    {
-      icon: Clock,
-      title: 'Flexible Scheduling',
-      description: 'Practice anytime with customizable interview durations and difficulty levels.',
-      color: 'text-orange-600',
-      available: true
-    }
+
+       {
+      icon: BookOpen,
+      title: 'Mock Preparation',
+      description: 'Comprehensive mock interview sessions with industry-specific scenarios.',
+      color: 'text-rose-600',
+      comingSoon: true
+    },
   ];
 
   const upcomingFeatures = [
@@ -67,13 +68,7 @@ const Index = () => {
       color: 'text-indigo-600',
       comingSoon: true
     },
-    {
-      icon: BookOpen,
-      title: 'Mock Preparation',
-      description: 'Comprehensive mock interview sessions with industry-specific scenarios.',
-      color: 'text-rose-600',
-      comingSoon: true
-    },
+
     {
       icon: PenTool,
       title: 'PDF Editor & Analyzer',
@@ -306,6 +301,11 @@ const Index = () => {
             </p>
           </motion.div>
 
+
+{/* 
+ TO FIX THIS LIKE IT SHOULD BE LIKE A LIST OF THE DESCRIPTIONS AS A TICK MARK BY THE SIDE OF EACH FEATURE 
+
+*/}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -333,6 +333,17 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+
+
+
+{/* 
+
+ ADJUST AND MODIFY THIS COMING SOON PAGE TO BE LIKE A LIST OF THE DESCRIPTIONS AS A TICK MARK BY THE SIDE OF EACH FEATURE
+
+
+
+*/}
 
       {/* Upcoming Features Section */}
       <section className="py-24 bg-gradient-to-b from-purple-50/30 to-blue-50/20 dark:from-purple-950/10 dark:to-blue-950/5">
@@ -392,7 +403,7 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient-visible mb-8">
               Ready to Transform Your Career?
             </h2>
             <p className="text-xl text-purple-100 mb-12 max-w-2xl mx-auto">
