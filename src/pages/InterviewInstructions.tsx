@@ -6,7 +6,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { 
   ArrowLeft, 
   Camera, 
-  Mic, 
   Wifi, 
   Volume2, 
   Code, 

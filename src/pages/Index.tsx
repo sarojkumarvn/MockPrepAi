@@ -18,7 +18,8 @@ import {
   Map,
   FileImage,
   Star,
-  Zap
+  Zap,
+  Check
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -29,36 +30,55 @@ const Index = () => {
   const navigate = useNavigate();
 
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Interviews',
-      description: 'Advanced AI interviewer that adapts to your experience level and provides personalized questions.',
-      color: 'text-blue-600',
-      available: true
-    },
-    {
-      icon: Video,
-      title: 'Real-time Analysis',
-      description: 'Get instant feedback on your communication, body language, and technical responses.',
-      color: 'text-green-600',
-      available: true
-    },
-    {
-      icon: BookOpen,
-      title: 'Detailed Reports',
-      description: 'Comprehensive performance analytics with actionable insights for improvement.',
-      color: 'text-purple-600',
-      available: true
-    },
-
-       {
-      icon: BookOpen,
-      title: 'Mock Preparation',
-      description: 'Comprehensive mock interview sessions with industry-specific scenarios.',
-      color: 'text-rose-600',
-      comingSoon: true
-    },
-  ];
+  {
+    icon: Brain,
+    title: "AI-Powered Interviews",
+    description: [
+      "Adapts to your experience level",
+      "Provides personalized questions",
+      "Simulates real interviews",
+      "Saves preparation time",
+    ],
+    color: "text-blue-600",
+    available: true,
+  },
+  {
+    icon: Video,
+    title: "Real-time Analysis",
+    description: [
+      "Instant communication feedback",
+      "Body language analysis",
+      "Technical response insights",
+      "Confidence tracking",
+    ],
+    color: "text-green-600",
+    available: true,
+  },
+  {
+    icon: BookOpen,
+    title: "Detailed Reports",
+    description: [
+      "Comprehensive analytics",
+      "Actionable insights",
+      "Strengths and weaknesses",
+      "Downloadable reports",
+    ],
+    color: "text-purple-600",
+    available: true,
+  },
+  {
+    icon: BookOpen,
+    title: "Mock Preparation",
+    description: [
+      "Industry-specific scenarios",
+      "Full mock interviews",
+      "Realistic practice",
+      "Improves confidence",
+    ],
+    color: "text-rose-600",
+    comingSoon: true,
+  },
+]
 
   const upcomingFeatures = [
     {
@@ -284,117 +304,70 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Current Features Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-purple-50/30 dark:from-background dark:to-purple-950/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Available Now
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Start your interview preparation journey with our AI-powered platform
-            </p>
-          </motion.div>
+     {/*  Features Section */}
+<section className="py-24 bg-gradient-to-b from-background to-purple-50/30 dark:from-background dark:to-purple-950/10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        Features
+      </h2>
+      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Start your interview preparation journey with our AI-powered platform
+      </p>
+    </motion.div>
 
-
-{/* 
- TO FIX THIS LIKE IT SHOULD BE LIKE A LIST OF THE DESCRIPTIONS AS A TICK MARK BY THE SIDE OF EACH FEATURE 
-
-*/}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map((feature, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          whileHover={{ y: -10, scale: 1.02 }}
+        >
+          <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 h-full .border-0 bg-gradient-to-br from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20 border border-purple-200/30 dark:border-purple-800/30">
+            <CardHeader className="text-center pb-4">
+              <div
+                className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 flex items-center justify-center ${feature.color}`}
               >
-                <Card className="shadow-xl hover:shadow-2xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20 border border-purple-200/30 dark:border-purple-800/30">
-                  <CardHeader className="text-center pb-4">
-                    <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 flex items-center justify-center ${feature.color}`}>
-                      <feature.icon className="w-7 h-7" />
-                    </div>
-                    <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-center text-base leading-relaxed text-muted-foreground">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-
-{/* 
-
- ADJUST AND MODIFY THIS COMING SOON PAGE TO BE LIKE A LIST OF THE DESCRIPTIONS AS A TICK MARK BY THE SIDE OF EACH FEATURE
-
-
-
-*/}
-
-      {/* Upcoming Features Section */}
-      <section className="py-24 bg-gradient-to-b from-purple-50/30 to-blue-50/20 dark:from-purple-950/10 dark:to-blue-950/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Coming Soon
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Exciting new features are in development to supercharge your career journey
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <Card className="shadow-lg hover:shadow-xl transition-all duration-500 h-full border-0 bg-gradient-to-br from-white/60 to-gray-50/60 dark:from-gray-900/60 dark:to-gray-800/60 opacity-70 hover:opacity-90 relative overflow-hidden border border-gray-200 dark:border-gray-700">
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">
-                      Soon
+                <feature.icon className="w-7 h-7" />
+              </div>
+              <CardTitle className="text-xl text-foreground">
+                {feature.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {feature.description.map((point, idx) => (
+                  <li key={idx} className="flex items-start space-x-2">
+                    <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground text-sm leading-relaxed">
+                      {point}
                     </span>
-                  </div>
-                  <CardHeader className="text-center pb-4">
-                    <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center ${feature.color} opacity-60`}>
-                      <feature.icon className="w-7 h-7" />
-                    </div>
-                    <CardTitle className="text-xl text-gray-600 dark:text-gray-400">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-center text-base leading-relaxed text-gray-500 dark:text-gray-500">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+           <Button 
+                size="sm" 
+                variant="secondary"
+                className="text-lg px-5 py-4 ml-12 mb-5 bg-white text-purple-600 hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 font-semibold"
+                onClick={() => navigate('/*')}
+              >
+                Begin Now
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+          </Card>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* Call to Action Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
