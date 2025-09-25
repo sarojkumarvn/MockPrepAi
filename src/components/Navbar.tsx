@@ -23,7 +23,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
- // Toggle to dark mode
+  // Toggle to dark mode
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle('dark');
@@ -32,11 +32,10 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg' 
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg'
         : 'bg-transparent backdrop-blur-sm'
-    }`}>
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -90,30 +89,25 @@ const Navbar = () => {
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            {/* The theme Button  */}
+
+
+
             <Button
               variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="w-9 h-9 p-0 text-foreground hover:bg-accent"
-            >
-              {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
-            
-            <Button 
-              variant="ghost" 
               onClick={() => navigate('/signin')}
               className="font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             >
               Sign In
             </Button>
-            
-           <Button 
-  onClick={() => navigate('/signup')}
-  className={`btn-gradient ${darkMode ? "text-black/25" : "text-white"} font-medium hover:bg-black hover:text-black`}
->
-  Sign Up
-</Button>
+
+            <Button
+
+              variant="ghost"
+              onClick={() => navigate('/signup')}
+              className="font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            >
+              Sign Up
+            </Button>
 
           </div>
         </div>

@@ -353,15 +353,28 @@ const Index = () => {
                 ))}
               </ul>
             </CardContent>
-           <Button 
-                size="sm" 
-                variant="secondary"
-                className="text-lg px-5 py-4 ml-12 mb-5 bg-white text-purple-600 hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 font-semibold"
-                onClick={() => navigate('/*')}
-              >
-                Begin Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+          <Button 
+  size="sm" 
+  variant="secondary"
+  className="text-lg px-5 py-4 ml-12 mb-5 bg-white text-purple-600 hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 font-semibold"
+  onClick={() => {
+    if (feature.title === "AI-Powered Interviews") {
+      navigate("/interview-setup");
+    }
+    else if (feature.title === "Real-time Analysis") {
+      navigate("/interview-analysis")
+    }
+    else if (feature.title === "Detailed Reports") {
+      navigate("/*")
+    }
+    else if (feature.title === "Mock Preparation") {
+      navigate("/*")
+    }
+  }}
+>
+  Begin Now
+  <ArrowRight className="w-5 h-5 ml-2" />
+</Button>
           </Card>
         </motion.div>
       ))}
