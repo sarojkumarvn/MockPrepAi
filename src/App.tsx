@@ -12,6 +12,7 @@ import InterviewInstructions from "./pages/InterviewInstructions";
 import Interview from "./pages/Interview";
 import Analyzer from "./pages/Analyzer";
 import NotFound from "./pages/NotFound";
+import Interview_Analysis from "./pages/career_analysis";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/interview-instructions" element={<InterviewInstructions />} />
           <Route path="/interview" element={<Interview />} />
           <Route path="/analyzer" element={<Analyzer />} />
+          <Route path="/interview-analysis" element={<Interview_Analysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
